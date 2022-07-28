@@ -17,9 +17,13 @@
     ~/.oh-my-zsh/oh-my-zsh.sh:
       force: true
       path: oh-my-zsh/oh-my-zsh.sh
-    ~/.oh-my-zsh/themes/bullet-train.zsh-theme:
+    ~/.oh-my-zsh/themes/nord-extended/nord.zsh-theme:
       force: true
-      path: zsh/bullet-train.zsh-theme
+      path: oh-my-zsh/themes/nord-extended/bullet-train.zsh-theme
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux/themes/nord-tmux/nord.tmux:
+      force: true
+      path: tmux/themes/nord-tmux/nord.tmux
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
