@@ -20,10 +20,13 @@
     ~/.oh-my-zsh/themes/nord-extended/nord.zsh-theme:
       force: true
       path: oh-my-zsh/themes/nord-extended/bullet-train.zsh-theme
+    #tmux
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux/themes/nord-tmux/nord.tmux:
       force: true
       path: tmux/themes/nord-tmux/nord.tmux
+    #alacritty
+    ~/.alacritty.yml: alacritty/alacritty.yml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
