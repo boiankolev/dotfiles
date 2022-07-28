@@ -13,6 +13,13 @@
     ~/.dircolors: zsh/.dircolors
     ~/.zshenv: zsh/zshenv
     ~/.zsh_aliases: zsh/zsh_aliases
+    #oh-my-zsh
+    ~/.oh-my-zsh/oh-my-zsh.sh:
+      force: true
+      path: oh-my-zsh/oh-my-zsh.sh
+    ~/.oh-my-zsh/themes/bullet-train.zsh-theme:
+      force: true
+      path: zsh/bullet-train.zsh-theme
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
