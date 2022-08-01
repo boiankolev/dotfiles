@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "neovim/plugged/nord-vim"]
+	path = neovim/plugged/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim

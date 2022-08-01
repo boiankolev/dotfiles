@@ -27,6 +27,10 @@
       path: tmux/themes/nord-tmux/nord.tmux
     #alacritty
     ~/.alacritty.yml: alacritty/alacritty.yml
+    #neovim
+    ~/.config/nvim/init.vim: neovim/init.vim
+    ~/.config/nvim/plugins: neovim/plugged
+    ~/.config/nvim/colors: neovim/colors
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
