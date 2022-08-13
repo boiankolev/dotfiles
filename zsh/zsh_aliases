@@ -23,4 +23,4 @@ if [ -f ~/dotfiles/work_aliases ]; then
   . ~/dotfiles/work_aliases
 fi
 
-
+alias e='nvim'

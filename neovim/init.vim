@@ -207,7 +207,6 @@ call plug#begin()
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'tpope/vim-commentary'
-	Plug 'soywod/himalaya', {'rtp': 'vim'}
 	Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 	Plug 'kyazdani42/nvim-tree.lua'
     Plug 'onsails/lspkind.nvim'
