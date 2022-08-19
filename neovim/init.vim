@@ -167,11 +167,11 @@ call plug#begin()
 
 	Plug 'vim-syntastic/syntastic'
 
-	Plug 'airblade/vim-gitgutter'
+	" Plug 'airblade/vim-gitgutter'
 
 	Plug 'folke/which-key.nvim'
 
-	Plug 'tpope/vim-fugitive'
+	" Plug 'tpope/vim-fugitive'
 
 	Plug 'tpope/vim-surround'
 
@@ -207,6 +207,7 @@ call plug#begin()
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'tpope/vim-commentary'
+	Plug 'soywod/himalaya', {'rtp': 'vim'}
 	Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 	Plug 'kyazdani42/nvim-tree.lua'
     Plug 'onsails/lspkind.nvim'
@@ -219,18 +220,12 @@ call plug#begin()
 	Plug 'neovim/nvim-lspconfig'
     Plug 'mhinz/vim-startify'
     Plug 'ray-x/lsp_signature.nvim'
+    Plug 'akinsho/toggleterm.nvim'
 call plug#end()
 
 lua require('impatient')
 
 set completeopt=menu,menuone,noselect
-
-"" Nuake
-nnoremap <F4> :Nuake<CR>
-inoremap <F4> <C-\><C-n>:Nuake<CR>
-tnoremap <F4> <C-\><C-n>:Nuake<CR>
-let g:nuake_position = 'top'
-let g:nuake_size = '1'
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -288,7 +283,7 @@ command! E edit $MYVIMRC
 
 lua << EOF
 -- empty setup using defaults
-require("nvim-tree").setup()
+ require("nvim-tree").setup()
 EOF
 
 " Setup global configuration. More on configuration below.
@@ -424,4 +419,20 @@ cfg = {
 -- recommended:
 require'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
 require("lsp_signature").status_line(max_width)
+EOF
+
+"ttnoremap <Esc> <C-\><C-n>
+
+lua << EOF
+require("toggleterm").setup{
+    size = 20,
+    -- open_mapping = [[<c-\>]],
+    hide_numbers = true,
+    direction = 'float',
+    float_opts = {
+        border = 'curved',
+        -- like `size`, width and height can be a number or function which is passed the current terminal
+        winblend = 3,
+    },
+}
 EOF

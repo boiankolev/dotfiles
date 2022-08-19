@@ -10,7 +10,7 @@
     ~/.zshrc:
       force: true
       path: zsh/zshrc
-    ~/.dircolors: zsh/.dircolors
+    ~/.dir_colors: zsh/.dir_colors
     ~/.zshenv: zsh/zshenv
     ~/.zsh_aliases: zsh/zsh_aliases
     #oh-my-zsh
@@ -19,7 +19,7 @@
       path: oh-my-zsh/oh-my-zsh.sh
     ~/.oh-my-zsh/themes/nord-extended/nord.zsh-theme:
       force: true
-      path: oh-my-zsh/themes/nord-extended/bullet-train.zsh-theme
+      path: oh-my-zsh/themes/nord-extended/nord.zsh-theme
     #tmux
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux/themes/nord-tmux/nord.tmux:
@@ -28,6 +28,7 @@
     #alacritty
     ~/.alacritty.yml: alacritty/alacritty.yml
     #neovim
+    ~/.vimrc: neovim/init.vim
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.config/nvim/plugins: neovim/plugged
     ~/.config/nvim/colors: neovim/colors
