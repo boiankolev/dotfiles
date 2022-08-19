@@ -76,8 +76,6 @@ set number
 "Key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"exit terminal mode neovim
-tnoremap <Esc> <C-\><t-n>
 
 "Syntax
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -207,7 +205,6 @@ call plug#begin()
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'tpope/vim-commentary'
-	Plug 'soywod/himalaya', {'rtp': 'vim'}
 	Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 	Plug 'kyazdani42/nvim-tree.lua'
     Plug 'onsails/lspkind.nvim'
@@ -220,7 +217,7 @@ call plug#begin()
 	Plug 'neovim/nvim-lspconfig'
     Plug 'mhinz/vim-startify'
     Plug 'ray-x/lsp_signature.nvim'
-    Plug 'akinsho/toggleterm.nvim'
+    Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 call plug#end()
 
 lua require('impatient')
@@ -242,9 +239,6 @@ function! FilenameForLightline()
 endfunction
 
 colorscheme nord
-
-let g:himalaya_mailbox_picker = 'fzf'
-nnoremap gh :Himalaya<CR>
 
 let g:vim_markdown_conceal_code_blocks = 1
 
@@ -280,6 +274,21 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 "" edit config file
 command! E edit $MYVIMRC
+
+lua << EOF
+require("toggleterm").setup{
+    size = 20,
+    open_mapping = [[<c-\>]],
+    hide_numbers = true,
+    direction = 'float',
+    start_in_insert = false,
+    float_opts = {
+        border = 'curved',
+        -- like `size`, width and height can be a number or function which is passed the current terminal
+        winblend = 3,
+    },
+}
+EOF
 
 lua << EOF
 -- empty setup using defaults
@@ -419,20 +428,4 @@ cfg = {
 -- recommended:
 require'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
 require("lsp_signature").status_line(max_width)
-EOF
-
-"ttnoremap <Esc> <C-\><C-n>
-
-lua << EOF
-require("toggleterm").setup{
-    size = 20,
-    -- open_mapping = [[<c-\>]],
-    hide_numbers = true,
-    direction = 'float',
-    float_opts = {
-        border = 'curved',
-        -- like `size`, width and height can be a number or function which is passed the current terminal
-        winblend = 3,
-    },
-}
 EOF
