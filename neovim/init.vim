@@ -145,6 +145,9 @@ nnoremap ,b :Buffers<CR>
 nnoremap ,r :Rg<CR>
 nnoremap ,a :Ag<CR>
 
+" map <Leader>+F to search in ag the word under the cursor
+map <Leader>f :call fzf#vim#ag(expand('<cword>'))<kEnter>
+
 ""Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
