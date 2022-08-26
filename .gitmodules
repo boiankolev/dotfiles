@@ -8,3 +8,6 @@
 [submodule "oh-my-zsh/themes/nord-tmux"]
 	path = oh-my-zsh/themes/nord-tmux
 	url = https://github.com/arcticicestudio/nord-tmux
+[submodule "oh-my-zsh/themes/nord-extended"]
+	path = oh-my-zsh/themes/nord-extended
+	url = https://github.com/fxbrit/nord-extended
