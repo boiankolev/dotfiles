@@ -5,3 +5,6 @@
 [submodule "neovim/plugged/nord-vim"]
 	path = neovim/plugged/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim
+[submodule "oh-my-zsh/themes/nord-tmux"]
+	path = oh-my-zsh/themes/nord-tmux
+	url = https://github.com/arcticicestudio/nord-tmux
