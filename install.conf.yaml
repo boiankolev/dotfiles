@@ -22,6 +22,7 @@
       path: oh-my-zsh/themes/nord-extended/nord.zsh-theme
     #tmux
     ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux: tmux
     ~/.tmux/themes/nord-tmux/nord.tmux:
       force: true
       path: tmux/themes/nord-tmux/nord.tmux
@@ -31,4 +32,3 @@
     ~/.vimrc: neovim/init.vim
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.config/nvim/plugins: neovim/plugged
-    ~/.config/nvim/colors: neovim/colors

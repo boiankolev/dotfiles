@@ -159,52 +159,28 @@ map <Leader>f :call fzf#vim#ag(expand('<cword>'))<kEnter>
 "telescope
 call plug#begin()
     Plug 'lewis6991/impatient.nvim'
-
 	Plug 'godlygeek/tabular'
-
 	Plug 'preservim/vim-markdown'
-
 	Plug 'itchyny/lightline.vim'
-
 	Plug 'vim-syntastic/syntastic'
-
-	" Plug 'airblade/vim-gitgutter'
-
 	Plug 'folke/which-key.nvim'
-
-	" Plug 'tpope/vim-fugitive'
-
 	Plug 'tpope/vim-surround'
-
 	Plug 'tpope/vim-unimpaired'
-
 	Plug 'fatih/vim-go'
-
 	Plug 'rust-lang/rust.vim'
-
 	Plug 'xolox/vim-misc'
-
 	Plug 'mileszs/ack.vim'
-
 	Plug 'rbgrouleff/bclose.vim'
-
 	Plug 'easymotion/vim-easymotion'
-
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 	Plug 'christoomey/vim-tmux-navigator'
-
 	Plug 'nvim-lua/plenary.nvim'
-
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-
 	Plug 'preservim/tagbar'
-
 	Plug 'junegunn/fzf.vim'
-
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'arcticicestudio/nord-vim'
 	Plug 'shaunsingh/nord.nvim'
-
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'tpope/vim-commentary'

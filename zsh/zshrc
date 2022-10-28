@@ -10,6 +10,10 @@ export LS_COLORS="$(vivid generate nord)"
 bindkey -v
 bindkey '^f' history-incremental-search-backward
 
+# Lang
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
